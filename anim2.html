@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>animation</title>
+        <style>
+            body{
+                font-family: cursive;
+                margin: 0%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+align-items: center;
+height: 100vh;
+background: linear-gradient(60deg,lavender,blueviolet,rgb(108, 228, 108));
+      color: blanchedalmond;     
+}
+.animation{
+    overflow: hidden;
+    border: 2px dotted snow;
+    border-radius: 30%;
+    padding: 20px;
+    white-space: nowrap;
+}
+.effect{
+    display: inline-block;
+    font-size: medium;
+    font-weight: 200;
+    animation: scroll-left 4s linear infinite;
+}
+@keyframes scroll-left{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-100%);
+        
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div class="animation">
+            <div class="effect">
+                Here is the scrolling text animation
+            </div>
+
+        </div>
+    </body>
+</html>
