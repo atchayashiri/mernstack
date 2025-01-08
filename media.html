@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>responsive media page</title>
+        <style>
+            *{
+                margin-bottom: auto;
+                padding: 0%;
+                color: #fcf5fe;
+                grid-area: unset;
+            }
+            body{
+                font-family:cursive;
+                line-height: 1.5;
+                background: linear-gradient(120deg,#d062e7,#52f8fb);
+            }
+            header{
+                text-align: center;
+                padding: 50px,22px;
+                background: linear-gradient(130deg,#45f9ff,rgb(235, 247, 249));
+            }
+            header p{
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            header .mda{
+                background: #0b38be;
+                color: rgb(254, 236, 214);
+                font-size: 1.3rem;
+                border-radius: 35px;
+                padding: 12px;
+                box-shadow: 35px;
+                transition: transform 0.5s,box-shadow 0.5s;
+            }
+            header .mda:hover{
+                transform: translate(-6px);
+                box-shadow: 0 10px 20px #e4fa1d;
+            }
+            .grid-view{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 25px;
+                padding: 50px 30px;
+                max-width:1150px ;
+
+            }
+            .grid{
+                background: #74fafe;
+                border-radius: 30px;
+                padding: 18px;
+                text-align: center;
+                box-shadow:0 10px 30px #f7edf9  ;
+            }
+            .grid:hover{
+                transform: translateY(-5px);    
+                box-shadow: 0 12px 25px #e4fa1d;
+                color: #fbb752;
+            }
+            .grid h2{
+                font-size: 1.7rem;
+                margin-bottom: 18px;
+                color: rgba(165, 10, 153, 0.634);
+
+            }
+            .grid p{
+                font-size: 1rem;
+                color: rgb(22, 23, 24);
+            }
+            footer{
+                text-align: center;
+                background: #da5cf4;
+                padding: 20px;
+                color: rgba(98, 224, 255, 0.992);
+                font-weight: bold;
+
+            }
+            @media(max-width:1150px) {
+                .grid-view{
+                    grid-template-columns: repeat(2,0.8fr);
+                }
+                header h1{
+                    font-size: 2.5rem;
+                    
+                }
+                header p{
+                    font-size: 1rem;
+                }
+                header .mda{
+                    padding: 3px 4px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Landing page</h1>
+            <p>Here we can experience the responsive design and modern aspects</p>
+            <a href="#" class="mda">let's Begin!</a>
+        </header>
+        <section class="grid-view">
+            <div class="grid">
+                <h2>Discover the page</h2>
+                <p>Here is a innovative design with response </p>
+            </div>
+            <div class="grid">
+                <h2>Discover the 2nd option</h2>
+                <p>Experience the seamless response all over the devices and screen size</p>
+            </div>
+            <div class="grid">
+                <h2>Discover the 3rd option</h2>
+                <p>End user can enjoy the edge cutting</p>
+            </div>
+        </section>
+            <footer>
+                <p>&copy; 2025 Responsive design. All rights reserved. <a href="#">Learn more</a></p>
+            </footer>
+
+       
+    </body>
+</html>

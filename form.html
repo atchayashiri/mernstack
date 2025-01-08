@@ -1,0 +1,102 @@
+<html>
+    <head>
+    <title>
+        impressive form design
+    </title>
+    <style>
+        body{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background:linear-gradient(120,#31a858);
+            color: rgb(238, 159, 242);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 110vh;
+        }
+        .form{
+            background:  rgb(47, 109, 109);
+            backdrop-filter: blur(12px);
+            padding: 28px;
+            border-radius: 15px;
+            width: 400px;
+            max-width: 400px;
+            box-shadow: 0;
+        }
+        .form h1{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-shadow: 0 8px 20px rgb(225, 219, 226);
+            
+        }
+        .form label{
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: beige;
+
+        }
+        .form input[type="text"],
+        .form input[type="password"],
+        .form input[type="email"],
+        .form button{
+            width:100%;
+            padding:12px 20px;
+            margin-bottom :18px;
+            border-radius:8px;
+            outline:none;
+            border:none;
+            font-size:1 rem;
+            transition:all 0.5s ease;
+
+        }
+        .form input[type="text"],
+        .form input[type="password"],
+        .form input[type="email"]{
+        background:rgb(212, 215, 214);
+        box-shadow: 0 0 8px aqua;
+        }
+        .form input[type="text"],
+        .form input[type="password"],
+        .form input[type="email"]{
+            background: aliceblue;
+            box-sizing: 0 0 8px ;
+        }
+        .form button{
+            background: rgb(209, 170, 247);
+            color: rgb(64, 64, 108);
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgb(136, 203, 234);
+        }
+        .form button:hover{
+            background:rgb(71, 238, 238);
+            box-shadow: 0 6px 16px rosybrown;
+            transform:translate(-8px) ;
+
+        }
+        .form p{
+            text-align:center;
+            font:size 0.7rem ;
+            color:rgb(188, 219, 189);
+        }
+    </style>
+</head>
+<body>
+<div class="form">
+<form >
+<h1>SIGN UP</h1>
+<LABEl for="name">USERNAME</LABEl>
+<input type="text" id="name" name="name" placeholder="Enter your name" required>
+<br>
+<LAbel for="email">EMAIL</LAbel>
+<input type="email" id="email" name="email" placeholder="Enter email id" required>
+<br><label for="pass">PASSWORD</label>
+<INput type="password" id="pass" name="password" placeholder="Enter passsword" required>
+<br><button type="submit">SUBMIT</button>
+<P>Already have an account <a href="">login here</a></P>
+</form>
+</div>  
+</body>
+</html>
