@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <style>
+            body{
+                font-family:cursive;
+                margin:auto;
+                background-color: rgb(183, 41, 244);
+                padding: 20px;
+                margin: 10px;
+                border-right: 20px;
+            }
+            .form{
+                width:380px;
+                margin-bottom:auto;
+                
+
+            }
+            .form-one{
+             margin-bottom:18px solid;
+            }
+            label{
+                display:block;
+                margin-bottom:8px;
+            }
+            input{
+                padding:8px;
+                width:50%;
+                box-sizing: border-box;
+                
+            }
+            button{
+                padding:10px 18px;
+                background-color: rgb(52, 253, 179);
+                color:rgb(20, 21, 22);
+                border-radius: 100px;
+                cursor: pointer;
+            }
+            button:hover{
+                background:#0f0d0d;
+                color:rgb(52, 253, 179);
+                box-shadow: 0 10px 20px #1e1e1e; 
+            }
+        
+            
+
+        </style>
+    </head>
+    <body>
+        <h2>Form with Validation</h2>
+        <form id="myForm">
+            <div class="form-one">
+                <label for="username">Username:</label>
+                <input type="text"id="username"name="username">
+                <div class="error" id="usernameError"></div>
+            </div>
+            <br>
+            <div class="form-one">
+                <label for="email">Email:</label>
+                <input type="email"id="email"name="email">
+                <div class="error" id="emailError"></div>
+            </div>
+            <br>
+            <div class="form-one">
+                <label for="password">Password:</label>
+                <input type="password"id="password"name="password">
+                <div class="error" id="passwordError"></div>
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+            document.getElementById("myForm").addEventListener("submit",function(event){
+event.preventDefault();
+//If no error throws
+document.getElementById("usernameError").textContent=" ";
+document.getElementById("emailError").textContent=" ";
+document.getElementById("passwordError").textContent=" ";
+const username=document.getElementById("username").value.trim();
+const email=document.getElementById("email").value.trim();
+const password=document.getElementById("password").value.trim();
+
+let valid=true;
+if(username==""){
+    document.getElementById("usernameError").textContent="username is required.";
+    valid=false;
+}
+//email validation
+if(email==""){
+    document.getElementById("emailError").textContent="email is required.";
+    valid=false;
+}
+//password validation
+if(password==""){
+    document.getElementById("passwordError").textContent="password is required.";
+    valid=false;
+}
+//overall validation
+if(valid){
+    alert("Form,validated Successfully");
+}
+            })
+        </script>
+    </body>
+</html>
